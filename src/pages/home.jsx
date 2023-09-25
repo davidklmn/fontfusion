@@ -7,9 +7,16 @@ export default function Home() {
   // const [weight, setWeight] = useState([400]);
 
   const changeFont = (e) => {
+    // const upperCased = () => {
+    //   e.preventDefault();
+    //   return
+    const newFont = e.target.fontname.value;
+    const upperCaseNewFont = newFont.charAt(0).toUpperCase() + newFont.slice(1);
+
     e.preventDefault();
-    console.log(e.target.fontname.value);
-    setFont(e.target.fontname.value);
+    console.log(newFont);
+    console.log(upperCaseNewFont);
+    setFont(upperCaseNewFont);
   };
 
   return (
@@ -32,7 +39,7 @@ export default function Home() {
 
       <div className="content">
         <h1 className="font-name" style={{ fontFamily: currentFont }}>
-          Helvetica
+          {currentFont}
         </h1>
         <form onSubmit={changeFont}>
           <input type="text" name="fontname" placeholder={currentFont} />
