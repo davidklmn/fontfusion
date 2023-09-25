@@ -1,0 +1,98 @@
+.top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 50px;
+}
+
+.top-container h2 {
+  margin: 0;
+  letter-spacing: -2.8px;
+  font-size: 40px;
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.top-container h2 span {
+  color: blue;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 85vh;
+  margin: 0 50px 25px 50px;
+
+  background-color: aqua;
+}
+
+.content .font-name {
+  color: #0d0d0d;
+  font-family: Helvetica;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 25px 0 25px 0;
+}
+
+.content hr {
+  margin: 0;
+  border: 1px solid #0d0d0d;
+  width: 50%;
+}
+
+.content .settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+.color-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.back-color-rectangle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #0d0d0d;
+}
+
+.font-color-rectangle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #0d0d0d;
+}
+
+.designer span {
+  font-weight: 700;
+}
+
+.main-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.main-text p {
+  font-size: 60px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  letter-spacing: -1px;
+  font-size: 20px;
+}
+
+footer span {
+  font-weight: 700;
+}
