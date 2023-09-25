@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
+import GoogleFontLoader from "react-google-font-loader";
 
 export default function Home() {
+  const [currentFont, setFont] = useState("Helvetica");
+  // const [weight, setWeight] = useState([400]);
+
+  const changeFont = (e) => {
+    e.preventDefault();
+    console.log(e.target.fontname.value);
+    setFont(e.target.fontname.value);
+  };
+
   return (
     <div className="container">
+      <GoogleFontLoader
+        fonts={[
+          {
+            font: currentFont,
+            weights: [400, "400i"],
+          },
+        ]}
+      />
+
       <div className="top-container">
         <h2 id="logo">
           Font<span>Fusion</span>
@@ -12,7 +31,13 @@ export default function Home() {
       </div>
 
       <div className="content">
-        <h1 className="font-name">Helvetica</h1>
+        <h1 className="font-name" style={{ fontFamily: currentFont }}>
+          Helvetica
+        </h1>
+        <form onSubmit={changeFont}>
+          <input type="text" name="fontname" placeholder={currentFont} />
+        </form>
+
         <hr />
 
         <div className="settings">
@@ -33,7 +58,9 @@ export default function Home() {
         </div>
 
         <div className="main-text">
-          <p>The brown fox jumps over the lazy dog</p>
+          <p style={{ fontFamily: currentFont }}>
+            The brown fox jumps over the lazy dog
+          </p>
         </div>
 
         <div className="font-text">

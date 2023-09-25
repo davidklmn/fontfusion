@@ -1,3 +1,7 @@
+.container {
+  height: 100vh;
+}
+
 .top-container {
   display: flex;
   align-items: center;
@@ -23,7 +27,7 @@
   align-items: center;
   flex-direction: column;
 
-  height: 85vh;
+  height: 85%;
   margin: 0 50px 25px 50px;
 
   background-color: aqua;
@@ -83,6 +87,7 @@
 
 .main-text p {
   font-size: 60px;
+  margin: 50px;
 }
 
 footer {
